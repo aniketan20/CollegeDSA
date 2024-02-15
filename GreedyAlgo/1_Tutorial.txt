@@ -1,0 +1,18 @@
+Greedy Algo
+-----------
+
+1. Local Optimal - it follows local optimal choice at each stage, with intend to global optimal choice
+2. Feasible Solution - Multiple Choices
+3. Optimal Solution -  Best Choice
+4. Irrevocability - The selected choice cannot be alteres (Back tracking is not allowed)
+
+Problems using algos
+--------------------
+
+1. Coin Change Problem
+2. Knapsack Problems
+3. Job Sequencing Problems
+4. Single Source Shortest Path
+5. Minimum Spanning Tree
+6. Travelling Salesman Problem
+7. Shortest Path
