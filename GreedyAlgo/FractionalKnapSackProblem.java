@@ -125,11 +125,11 @@ import java.util.*;
 
 public class FractionalKnapSackProblem {
 
-	public static void sort(double items[][]){	
+	public static void sort(double[][] items){	
 		Arrays.sort(items, (items1,items2) -> Double.compare(items2[0]/items2[1],items1[0]/items1[1]));
 	}
 
-	public static double calculatePro(double items[][],double knapsack){
+	public static double calculatePro(double[][] items,double knapsack){
 		sort(items);	
 		double maxPro = 0;
 		for(int i = 0 ; i < items.length ; i++){
@@ -148,7 +148,7 @@ public class FractionalKnapSackProblem {
 	} 
 
 	public static void main(String[] args) {
-		double items[][] = {
+		double[][] items = {
 			{120, 17},
 			{100, 13},
 			{60, 8}
