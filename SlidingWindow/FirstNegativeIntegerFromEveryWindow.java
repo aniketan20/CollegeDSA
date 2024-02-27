@@ -5,7 +5,7 @@
 
 public class FirstNegativeIntegerFromEveryWindow {
     public static void main(String[] args) {
-        int arr[] = {-8,2,3,-6,1,-7,3};
+        int arr[] = {-8,-2,3,-6,1,-7,3};
         int w = 3;
         int n = arr.length;
         
@@ -29,7 +29,7 @@ public class FirstNegativeIntegerFromEveryWindow {
         int NI=0,NE=0;
         for(int i = w - 1; i < n ; i++){
             while((NI < i) && (NI <= (i-w) || arr[NI] >= 0)){
-                NI++;
+                NI++;                                                                           
             }
             if(arr[NI] < 0){
                 NE = arr[NI];
@@ -41,3 +41,5 @@ public class FirstNegativeIntegerFromEveryWindow {
         }
     }
 }
+
+
