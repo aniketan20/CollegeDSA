@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class SeiveOfEratosthnes {
+public class SeiveOfEratosthenes {
     public static void main(String[] args) {
         boolean[] visited = new boolean[101];
         Arrays.fill(visited, true);

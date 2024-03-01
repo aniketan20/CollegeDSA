@@ -6,7 +6,7 @@
 
 import java.util.*;
 
-public class SegmentedSeiveOfEratostenes {
+public class SegmentedSeiveOfEratosthenes {
 
     public static void segmentedSeive(boolean visited[], List li, int len,int start){
         for(int i = 0 ; i < li.size() ; i++){
