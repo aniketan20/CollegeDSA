@@ -1,0 +1,14 @@
+0101
+
+count 1 = 2 m = 2
+count 0 = 2 n = 2
+
+while(  m!= 1){
+    s.append("1");
+    m--;
+}
+while(n!= 0){
+    s.append("0");
+    n--;
+}
+s.append("1");
