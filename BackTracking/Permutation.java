@@ -1,3 +1,7 @@
+/*
+ * TC - O(n! * n)
+ */
+
 public class Permutation {
 
     public static void permutation(char arr[],int vis[],int pos,char ans[]){
