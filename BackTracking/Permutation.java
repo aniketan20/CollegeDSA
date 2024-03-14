@@ -1,16 +1,24 @@
 public class Permutation {
 
-    public static int fact(int n){
-        int fact = 1;
-        for(int i = 1 ; i <= n ; i++){
-            fact *= i;
+    public static void permutation(char arr[],int vis[],int pos,char ans[]){
+        if(pos == arr.length){
+            System.out.println(ans);
+            return;
         }
-        return fact;
+        for(int i = 0 ; i < arr.length ; i++){
+            if(vis[i] == 0){
+                vis[i] = 1;
+                ans[pos] = arr[i];
+                permutation(arr,vis,pos+1,ans);
+                vis[i] = 0;
+            }
+        }
     }
     public static void main(String[] args) {
         String str = "ABC";
-        for(int i = 0 ; i < fact(str.length()) ; i++){
-            
-        }
+        int vis[] = new int[str.length()];
+        char ans[] = new char[str.length()];
+        char arr[] = str.toCharArray();
+        permutation(arr,vis,0,ans);
     }
 }
