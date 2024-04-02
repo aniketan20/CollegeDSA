@@ -8,7 +8,9 @@ public class ValidParenthesis {
         table.put('}','{');
         
         Stack<Character> stack = new Stack<>();
-        String str = "{}()";
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
 
 
         for(char ch : str.toCharArray()){
