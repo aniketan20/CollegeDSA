@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Stack;
 
 public class NearestSmallerElement {
     public static void main(String[] args) {
-        int arr[] = new int[]{7,3,8,4,-4,13,7,14};
+        int arr[] = new int[]{7,3,8,4,13,7,14};
         int n = arr.length;
         Stack<Integer> stack = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
@@ -20,6 +21,8 @@ public class NearestSmallerElement {
             }
             stack.push(arr[i]);
         }
+
+        Collections.reverse(list);
 
         System.out.println(list);
     }
