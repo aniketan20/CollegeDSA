@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -88,8 +89,22 @@ public class LevelOrderTraversal {
                     System.out.print(temp.data+" ");
                 }
             }
-            
         }
+    }
+
+    static HashMap<Integer, ArrayList> hm = new HashMap<>();
+
+    public static void verticalTraversal(Node root){
+        Queue<Integer> queue = new LinkedList<>();
+        
+        if(root == null)    return; 
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node temp = queue.poll();
+        }
+    
+        
+        
     }
 
     public static void main(String[] args) {
