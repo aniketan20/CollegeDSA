@@ -1,3 +1,8 @@
 max no. of link = nc2
 
 tc for graph traversal : O(no. of edges) or O(nc2);
+
+topological sort:
+
+if node "u" is connected to node "v", "u" always comes before "v" in the topological sort
+
