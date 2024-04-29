@@ -1,1 +1,3 @@
 max no. of link = nc2
+
+tc for graph traversal : O(no. of edges) or O(nc2);
