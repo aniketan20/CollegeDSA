@@ -19,16 +19,3 @@
 /**
  * SumOfMinMaxInAllSubarrays
  */
-public class SumOfMinMaxInAllSubarrays {
-
-    public static void main(String[] args) {
-        int arr[] = {1,5,2};
-
-        int leftMax = new int[3];
-        int rightMax = new int[3];
-        int leftMin = new int[3];
-        int rightMin = new int[3];
-
-        
-    }
-}
