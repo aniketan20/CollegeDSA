@@ -1,20 +1,35 @@
 import java.util.*;
 public class GraphDemo {
 
-    public static void traverseGraph(HashMap<Integer,ArrayList<Integer>> hm){
+    //BFS
+    // public static void traverseGraph(HashMap<Integer,ArrayList<Integer>> hm){
 
-        Queue<Integer> qu = new LinkedList<Integer>();
-        ArrayList<Integer> visited = new ArrayList<>();
+    //     Queue<Integer> qu = new LinkedList<Integer>();
+    //     ArrayList<Integer> visited = new ArrayList<>();
 
-        qu.add(1);
-        while(!qu.isEmpty()){
-            int temp = qu.poll();
-            for(int i : hm.get(temp)){
-                if(!visited.contains(i)){
-                    qu.add(i);
-                }
-            }
-            System.out.print(temp+" ");
+    //     qu.add(1);
+    //     while(!qu.isEmpty()){
+    //         int temp = qu.poll();
+    //         for(int i : hm.get(temp)){
+    //             if(!visited.contains(i)){
+    //                 visited.add(i);
+    //                 qu.add(i);
+    //             }
+    //         }
+    //         System.out.print(temp+" ");
+    //     }
+    // }
+
+    //DFS
+    public static void traverseGraph(HashMap<Integer,ArrayList<Integer>> hm, ArrayList<Integer> visited , int x){
+        if(visited.contains(x)){
+            return;
+        }
+        System.out.print(x+" ");
+        visited.add(x);
+
+        for(int i : hm.get(x)){
+            traverseGraph(hm, visited, i);
         }
     }
 
@@ -37,6 +52,7 @@ public class GraphDemo {
             hm.get(start).add(dest);
         }
 
-        traverseGraph(hm);
+        // traverseGraph(hm); //BFS
+        traverseGraph(hm,new ArrayList<>(),1); //DFS
     }
 }
