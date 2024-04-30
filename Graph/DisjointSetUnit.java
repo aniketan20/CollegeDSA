@@ -6,29 +6,36 @@ public class DisjointSetUnit {
 
     static Scanner sc = new Scanner(System.in);
 
+    public static int checkRootParent(int []p, int x){
+        if(p[x] == x) return x;
+        return checkRootParent(p,p[x]);
+    }
+
     public static void DSU(HashMap<Integer,ArrayList<Integer>> hm , int[] p){
-        // for(int x : p) System.out.print(x+" ");
-        //     System.out.println();
         int t = sc.nextInt();
         while(t > 0){
 
             int u = sc.nextInt();
             int v = sc.nextInt();
-            int su = p[u];
-            int sv = p[v];
 
-            int ru = 0;
-            int rv = 0;
+            // int su = p[u];
+            // int sv = p[v];
 
-            while(ru != su){
-                ru = su;
-                su = p[su];
-            }
+            // int ru = 0;
+            // int rv = 0;
 
-            while(rv != sv){
-                rv = sv;
-                sv = p[sv];
-            }
+            // while(ru != su){
+            //     ru = su;
+            //     su = p[su];
+            // }
+
+            // while(rv != sv){
+            //     rv = sv;
+            //     sv = p[sv];
+            // }
+
+            int ru = checkRootParent(p, u);
+            int rv = checkRootParent(p, v);
 
             if(rv == ru){
                 System.out.println("false");
