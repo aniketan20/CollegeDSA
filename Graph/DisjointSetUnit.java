@@ -8,7 +8,7 @@ public class DisjointSetUnit {
 
     public static int checkRootParent(int []p, int x){
         if(p[x] == x) return x;
-        return checkRootParent(p,p[x]);
+        return p[x] = checkRootParent(p,p[x]);
     }
 
     public static void DSU(HashMap<Integer,ArrayList<Integer>> hm , int[] p){
