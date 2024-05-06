@@ -43,8 +43,8 @@ public class DisjointSetUnit {
             else{
                 System.out.println("true");
                 hm.get(Math.max(u,v)).add(Math.min(u,v));
-                p[u] = Math.min(ru,rv);
-                p[v] = Math.min(ru,rv);
+                p[ru] = Math.min(ru,rv);
+                p[rv] = Math.min(ru,rv);
             }
             // for(int x : p) System.out.print(x+" ");
             // System.out.println();
@@ -84,4 +84,14 @@ public class DisjointSetUnit {
 3 2
 5 4
 10
+
+Amortiset TC:-
+o(n)
+o(1)
+o(1)
+o(1)
+o(1)
+o(1)
+
  */
+
